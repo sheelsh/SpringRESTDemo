@@ -14,7 +14,6 @@ import org.springframework.stereotype.Component;
  *
  * @author mastersheel007
  */
-
 @Component
 public class CORSFilter implements Filter {
 
@@ -27,7 +26,7 @@ public class CORSFilter implements Filter {
         htttpResponse.setHeader("Access-Control-Allow-Origin", "*");
         htttpResponse.setHeader("Access-Control-Allow-Methods", "POST, GET, DELETE, PUT");
         //htttpResponse.setHeader("Access-Control-Max-Age", "3600");
-        htttpResponse.setHeader("Access-Control-Allow-Headers", "X-Requested-With,Content-Type");
+        htttpResponse.setHeader("Access-Control-Allow-Headers", "X-Requested-With,Content-Type,Accept");
         chain.doFilter(request, response);
     }
 
